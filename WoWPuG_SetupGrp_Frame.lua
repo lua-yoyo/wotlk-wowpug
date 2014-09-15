@@ -486,23 +486,23 @@ end
 	WPuG_Channel_WhichChannel=WPuG_SetupGrp_SampleOutput_Frame:CreateFontString("WPuG_Channel_WhichChannel","ARTWORK","GameFontNormal");
 	WPuG_Channel_WhichChannel:SetPoint("TopRight",WPuG_SetupGrp_SampleOutput_Frame,"TopRight",-125,-5);
 	WPuG_Channel_WhichChannel:SetJustifyH("Left")
-	WPuG_Channel_WhichChannel:SetText("|cffffffff" .. "Channel: ")
+	WPuG_Channel_WhichChannel:SetText("|cffffffff" .. "Channels: ")
 	
-	for i=1,6 do
-		WPuG_Channel_CheckButton = CreateFrame("CheckButton", "WPuG_Channel_CheckButton:"..i, WPuG_SetupGrp_SampleOutput_Frame, "UICheckButtonTemplate")
-		_G["WPuG_Channel_CheckButton:"..i]:SetChecked(WoWPuG_DB["WPuG_Channel_CheckButton:"..i])
+	for i=1,#WPuG_AdvertiseChannels do
+		WPuG_Channel_CheckButton = CreateFrame("CheckButton", "WPuG_Channel_CheckButton:"..WPuG_AdvertiseChannels[i], WPuG_SetupGrp_SampleOutput_Frame, "UICheckButtonTemplate")
+		_G["WPuG_Channel_CheckButton:"..WPuG_AdvertiseChannels[i]]:SetChecked(WoWPuG_DB["WPuG_Channel_CheckButton:"..WPuG_AdvertiseChannels[i]])
 		
 		WPuG_Channel_CheckButton:SetWidth(20)
 		WPuG_Channel_CheckButton:SetHeight(20)
-		if i ==1 then
+		if WPuG_AdvertiseChannels[i] == 1 then
 			WPuG_Channel_CheckButton:SetPoint("Left",WPuG_Channel_WhichChannel,"Right",0,-2);
 		else 
-			WPuG_Channel_CheckButton:SetPoint("Left",_G["WPuG_Channel_CheckButton:"..i-1],"Right",10,0);
+			WPuG_Channel_CheckButton:SetPoint("Left",_G["WPuG_Channel_CheckButton:".. WPuG_AdvertiseChannels[i-1]],"Right",10,0);
 		end
 		WPuG_Channel_CheckButton:SetScript("OnClick",function(self)
 													WoWPuG_DB[self:GetName()] = self:GetChecked()
 												end)	
-		_G["WPuG_Channel_CheckButton:"..i.."Text"]:SetText("|cffffffff" .. i)
+		_G["WPuG_Channel_CheckButton:"..WPuG_AdvertiseChannels[i].."Text"]:SetText("|cffffffff" .. WPuG_AdvertiseChannels[i])
 	end
 -- Channel 1-6 (end) ------------------------------------------------------------------------------------------------------
 	
@@ -948,9 +948,9 @@ function WPuG_AutoAnnounce(State)
 														if timepassed >= WPuG_TimerInterval then
 															--print(WPuG_SendChatMessage);
 															WpuG_LastAdvertiseTime = time()
-															for i=1,6 do
-																if _G["WPuG_Channel_CheckButton:"..i]:GetChecked() then
-																	WPuG_MessageOutput(i)
+															for i=1,#WPuG_AdvertiseChannels do
+																if _G["WPuG_Channel_CheckButton:"..WPuG_AdvertiseChannels[i]]:GetChecked() then
+																	WPuG_MessageOutput(WPuG_AdvertiseChannels[i])
 																end
 															end
 														end

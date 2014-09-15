@@ -48,6 +48,7 @@ end
 
 
 WoWPuG_DB_Temp = {}
+WPuG_AdvertiseChannels = {1, 2, 6};
 
 WPuG_DelayOnStartup = CreateFrame("Frame")
 WPuG_DelayOnStartup:SetScript("OnUpdate",	function()
@@ -309,13 +310,16 @@ end
 
 function WPug_SetupDefaultSaveFile()
 	WoWPuG_DB["RaidSelected"] = 1;
-	
-	WoWPuG_DB["WPuG_Channel_CheckButton:" .. 1] = 1;
-	WoWPuG_DB["WPuG_Channel_CheckButton:" .. 2] = 0;
-	WoWPuG_DB["WPuG_Channel_CheckButton:" .. 3] = 0;
-	WoWPuG_DB["WPuG_Channel_CheckButton:" .. 4] = 0;
-    WoWPuG_DB["WPuG_Channel_CheckButton:" .. 5] = 0;
-    WoWPuG_DB["WPuG_Channel_CheckButton:" .. 6] = 1;
+
+    for i = 1,#WPuG_AdvertiseChannels do
+        WoWPuG_DB["WPuG_Channel_CheckButton:" .. WPuG_AdvertiseChannels[i]] = 1;
+    end
+--	WoWPuG_DB["WPuG_Channel_CheckButton:" .. 1] = 1;
+--	WoWPuG_DB["WPuG_Channel_CheckButton:" .. 2] = 0;
+--	WoWPuG_DB["WPuG_Channel_CheckButton:" .. 3] = 0;
+--	WoWPuG_DB["WPuG_Channel_CheckButton:" .. 4] = 0;
+--    WoWPuG_DB["WPuG_Channel_CheckButton:" .. 5] = 0;
+--    WoWPuG_DB["WPuG_Channel_CheckButton:" .. 6] = 1;
 	
 	WoWPuG_DB["Raid"] = {
 		{
