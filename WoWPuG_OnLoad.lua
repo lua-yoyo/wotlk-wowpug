@@ -310,10 +310,12 @@ end
 function WPug_SetupDefaultSaveFile()
 	WoWPuG_DB["RaidSelected"] = 1;
 	
-	WoWPuG_DB["WPuG_Channel_CheckButton:" .. 1] = 0;
-	WoWPuG_DB["WPuG_Channel_CheckButton:" .. 2] = 1;
+	WoWPuG_DB["WPuG_Channel_CheckButton:" .. 1] = 1;
+	WoWPuG_DB["WPuG_Channel_CheckButton:" .. 2] = 0;
 	WoWPuG_DB["WPuG_Channel_CheckButton:" .. 3] = 0;
-	WoWPuG_DB["WPuG_Channel_CheckButton:" .. 4] = 1;
+	WoWPuG_DB["WPuG_Channel_CheckButton:" .. 4] = 0;
+    WoWPuG_DB["WPuG_Channel_CheckButton:" .. 5] = 0;
+    WoWPuG_DB["WPuG_Channel_CheckButton:" .. 6] = 1;
 	
 	WoWPuG_DB["Raid"] = {
 		{
@@ -431,11 +433,13 @@ local NeedTypes =
 	WoWPuG_DB["Raid"] = temp;
 	
 	WoWPuG_DB["RaidSelected"] = 1;
-	
-	WoWPuG_DB["WPuG_Channel_CheckButton:" .. 1] = 0;
-	WoWPuG_DB["WPuG_Channel_CheckButton:" .. 2] = 1;
-	WoWPuG_DB["WPuG_Channel_CheckButton:" .. 3] = 0;
-	WoWPuG_DB["WPuG_Channel_CheckButton:" .. 4] = 1;
+
+    WoWPuG_DB["WPuG_Channel_CheckButton:" .. 1] = 1;
+    WoWPuG_DB["WPuG_Channel_CheckButton:" .. 2] = 0;
+    WoWPuG_DB["WPuG_Channel_CheckButton:" .. 3] = 0;
+    WoWPuG_DB["WPuG_Channel_CheckButton:" .. 4] = 0;
+    WoWPuG_DB["WPuG_Channel_CheckButton:" .. 5] = 0;
+    WoWPuG_DB["WPuG_Channel_CheckButton:" .. 6] = 1;
 end
 
 function WPuG_MessageOutput(WhichWindow)

@@ -2,7 +2,7 @@ WPuG_IncrementValue = 1;
 WPuG_JoinOrLeaveQue = {};
 
 local WPuG_SpecTypeNames = {	"tank",
-								"healer",
+								"healer/s",
 								"melee",
 								"ranged",
 								"unknown"
@@ -482,13 +482,13 @@ end
 	WPuG_SetupGrp_UsedString:SetText("Used: 0/255")
 -- Test Message (end) ------------------------------------------------------------------------------------------------------
 
--- Channel 1-4 (begin) ------------------------------------------------------------------------------------------------------
+-- Channel 1-6 (begin) ------------------------------------------------------------------------------------------------------
 	WPuG_Channel_WhichChannel=WPuG_SetupGrp_SampleOutput_Frame:CreateFontString("WPuG_Channel_WhichChannel","ARTWORK","GameFontNormal");
 	WPuG_Channel_WhichChannel:SetPoint("TopRight",WPuG_SetupGrp_SampleOutput_Frame,"TopRight",-125,-5);
 	WPuG_Channel_WhichChannel:SetJustifyH("Left")
 	WPuG_Channel_WhichChannel:SetText("|cffffffff" .. "Channel: ")
 	
-	for i=1,4 do
+	for i=1,6 do
 		WPuG_Channel_CheckButton = CreateFrame("CheckButton", "WPuG_Channel_CheckButton:"..i, WPuG_SetupGrp_SampleOutput_Frame, "UICheckButtonTemplate")
 		_G["WPuG_Channel_CheckButton:"..i]:SetChecked(WoWPuG_DB["WPuG_Channel_CheckButton:"..i])
 		
@@ -504,7 +504,7 @@ end
 												end)	
 		_G["WPuG_Channel_CheckButton:"..i.."Text"]:SetText("|cffffffff" .. i)
 	end
--- Channel 1-4 (end) ------------------------------------------------------------------------------------------------------
+-- Channel 1-6 (end) ------------------------------------------------------------------------------------------------------
 	
 	WPuG_DynamicRaidRoleSelector()
 	WoWPuG_WhisperCatcher_FrameSetup()
@@ -948,7 +948,7 @@ function WPuG_AutoAnnounce(State)
 														if timepassed >= WPuG_TimerInterval then
 															--print(WPuG_SendChatMessage);
 															WpuG_LastAdvertiseTime = time()
-															for i=1,4 do
+															for i=1,6 do
 																if _G["WPuG_Channel_CheckButton:"..i]:GetChecked() then
 																	WPuG_MessageOutput(i)
 																end
