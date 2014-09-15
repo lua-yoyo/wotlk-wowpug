@@ -809,7 +809,7 @@ if  WoWPuG_DB["KjutExtra"] ~= nil and WoWPuG_DB["KjutExtra"] == 1 then	--KjutExt
 		Total = Total + Need;
 	end
 	
-	OP_string = "{star}{star}LF" .. Total .. "M "
+	OP_string = "{star}{moon}LF" .. Total .. "M "
 end
 
 
@@ -925,7 +925,7 @@ end
 	end
 	WPuG_SetupGrp_UsedString:SetText("Used: |cff" .. StringUsed_Col ..StringUsed.."/255")
 	
-	WPuG_SendChatMessage = OP_string.."{star}{star}"
+	WPuG_SendChatMessage = OP_string.."{moon}{star}"
 	
 	--print(strlen(OP_string))
 	
