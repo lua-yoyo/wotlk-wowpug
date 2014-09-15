@@ -395,7 +395,7 @@ end
 	WPuG_AdvertiseEvery_Input:SetHeight(12) -- Set these to whatever height/width is needed 
 	WPuG_AdvertiseEvery_Input:SetMaxLetters(4)
 	WPuG_AdvertiseEvery_Input:SetPoint("TopLeft", WPuG_AdvertiseEvery_Text, "TopLeft", 0, -14)
-	WPuG_AdvertiseEvery_Input:SetText("60")
+	WPuG_AdvertiseEvery_Input:SetText("65")
 	WPuG_AdvertiseEvery_Input:SetScript("OnEditFocusGained",	function(self)
 													if self:GetText() == "" then
 														self:SetText("")
@@ -403,7 +403,7 @@ end
 												end)
 	WPuG_AdvertiseEvery_Input:SetScript("OnEditFocusLost",	function(self)
 													if self:GetText() == "" or tonumber(self:GetText()) < 10 then
-														self:SetText("60")
+														self:SetText("65")
 													end
 													WPuG_TimerInterval=tonumber(self:GetText())
 												end)
