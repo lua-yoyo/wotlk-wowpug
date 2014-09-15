@@ -925,7 +925,7 @@ end
 	end
 	WPuG_SetupGrp_UsedString:SetText("Used: |cff" .. StringUsed_Col ..StringUsed.."/255")
 	
-	WPuG_SendChatMessage = OP_string.."{moon}{star}"
+	WPuG_SendChatMessage = OP_string
 	
 	--print(strlen(OP_string))
 	
