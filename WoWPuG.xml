@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<Ui xmlns="http://www.blizzard.com/wow/ui/"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.blizzard.com/wow/ui/ ..\FrameXML\UI.xsd">
+
+  <Script file="WoWPuG_OnLoad.lua" />
+  <Script file="WoWPuG_Main_Frame.lua" />
+  <Script file="WoWPuG_SetupGrp_Frame.lua" />
+  <Script file="WoWPuG_LFGList_Frame.lua" />
+  <Script file="WoWPuG_Options_Frame.lua" />
+  
+  <Script file="WoWPuG_DynamicRaidRollSelector.lua" />
+  <Script file="WoWPuG_WhisperCatcher.lua" />
+  
+  
+  
+  
+  
+	
+	
+  <Frame name="MyAddOn_MainFrame"
+         parent="UIParent"
+         frameStrata="LOW"
+         toplevel="true"
+         inherits="SecureFrameTemplate">
+    <Anchors>
+      <Anchor point="CENTER" />
+    </Anchors>
+    <Scripts>
+      <OnLoad>WoWPuG_SlashSetup()</OnLoad>
+    </Scripts>
+  </Frame>
+  
+</Ui>
