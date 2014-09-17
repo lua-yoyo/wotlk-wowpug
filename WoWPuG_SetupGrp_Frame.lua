@@ -395,7 +395,7 @@ end
 	WPuG_AdvertiseEvery_Input:SetHeight(12) -- Set these to whatever height/width is needed 
 	WPuG_AdvertiseEvery_Input:SetMaxLetters(4)
 	WPuG_AdvertiseEvery_Input:SetPoint("TopLeft", WPuG_AdvertiseEvery_Text, "TopLeft", 0, -14)
-	WPuG_AdvertiseEvery_Input:SetText("65")
+	WPuG_AdvertiseEvery_Input:SetText("10")
 	WPuG_AdvertiseEvery_Input:SetScript("OnEditFocusGained",	function(self)
 													if self:GetText() == "" then
 														self:SetText("")
@@ -809,7 +809,7 @@ if  WoWPuG_DB["KjutExtra"] ~= nil and WoWPuG_DB["KjutExtra"] == 1 then	--KjutExt
 		Total = Total + Need;
 	end
 	
-	OP_string = "{star}{moon}LF" .. Total .. "M "
+	OP_string = "{circle}{skull}LF" .. Total .. "M "
 end
 
 
