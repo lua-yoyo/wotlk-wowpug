@@ -9,3 +9,7 @@ In-game usage
 =============
 
 Use the "/wpg show" command to display the interface or press "O", go the to Raid tab and click the WoWPuG button in the top middle of the window.
+
+Credits
+=======
+Project site: http://www.wowinterface.com/downloads/info20782-WoWPuGBuilder.html
