@@ -12,4 +12,4 @@ Use the "/wpg show" command to display the interface or press "O", go the to Rai
 
 Credits
 =======
-Project site: http://www.wowinterface.com/downloads/info20782-WoWPuGBuilder.html
+original project site: http://wow.curseforge.com/addons/wowpug/
