@@ -59,8 +59,6 @@ function WPuG_Options_FrameSetup()
 									end)	
 	_G["KjutExtra".."Text"]:SetText("|cffffffff" .. "Use LF{x}M Format")
 	
-	WoWPuG_DB["WPuG_WhisperTrackerCheckbox"] = WoWPuG_DB["WPuG_WhisperTrackerCheckbox"] or 1;
-	
 	WPuG_WhisperTrackerCheckbox = CreateFrame("CheckButton", "WPuG_WhisperTrackerCheckbox", WPuG_OptionsTab, "UICheckButtonTemplate")
 	WPuG_WhisperTrackerCheckbox:SetChecked(WoWPuG_DB["WPuG_WhisperTrackerCheckbox"])
 	WPuG_WhisperTrackerCheckbox:SetWidth(20)
