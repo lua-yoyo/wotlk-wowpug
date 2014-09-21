@@ -1,4 +1,4 @@
-## Interface: 40000
+## Interface: 30300
 ## Title: WoWPuG - WoW Pug Builder
 ## Author: Pombie & Musou of Lightning's Blade
 ## Notes: Addon to easily create a PuG.

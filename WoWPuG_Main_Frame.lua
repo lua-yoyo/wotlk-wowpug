@@ -24,6 +24,7 @@ function WPuG_MainFrameSetup()
 	
 	WPuG_MainFrame:SetWidth(500)
 	WPuG_MainFrame:SetHeight(400)
+    WPuG_MainFrame:SetScale(0.9)
 	WPuG_MainFrame:SetFrameStrata("High")
 	
 	
