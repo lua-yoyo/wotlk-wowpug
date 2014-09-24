@@ -49,6 +49,7 @@ end
 
 WoWPuG_DB_Temp = {}
 WPuG_AdvertiseChannels = {4, 5, 6};
+WPuG_AdvertiseChannel_Start = WPuG_AdvertiseChannels[1]
 
 WPuG_DelayOnStartup = CreateFrame("Frame")
 WPuG_DelayOnStartup:SetScript("OnUpdate",	function()

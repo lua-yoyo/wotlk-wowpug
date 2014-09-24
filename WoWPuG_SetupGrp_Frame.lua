@@ -494,9 +494,9 @@ end
 		
 		WPuG_Channel_CheckButton:SetWidth(20)
 		WPuG_Channel_CheckButton:SetHeight(20)
-		if WPuG_AdvertiseChannels[i] == 1 then
+		if WPuG_AdvertiseChannels[i] == WPuG_AdvertiseChannel_Start then
 			WPuG_Channel_CheckButton:SetPoint("Left",WPuG_Channel_WhichChannel,"Right",0,-2);
-		else 
+        else
 			WPuG_Channel_CheckButton:SetPoint("Left",_G["WPuG_Channel_CheckButton:".. WPuG_AdvertiseChannels[i-1]],"Right",10,0);
 		end
 		WPuG_Channel_CheckButton:SetScript("OnClick",function(self)
