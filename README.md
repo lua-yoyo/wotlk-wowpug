@@ -1,7 +1,7 @@
 wotlk-wowpug
 ============
 
-WoW Pug Builder adapted for the Molten WoW community.
+WoW Pug Builder adapted for the Private WoW community.
 
 Rename the extracted folder to WoWPuG!
 
